@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    background: linear-gradient(90deg, rgba(91, 30, 159, 1) 0%, rgba(77, 39, 182, 1) 100%);
+}
+
+body h2 {
+    color: white;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.spnQtd {
+    position: initial;
+    margin-left: 180px;
+}
+
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button {
+    width: 100%;
+    text-align: start;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #008CCC;
+    color: white;
+}
+
+.finish {
+    display: none;
+    flex-direction: column;
+    font-size: 95%;
+    gap: 10px;
+}
+
+.finish button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#startButton {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: black;
+
+}
+
+.start-button {
+    position: absolute;
+    text-align: center;
+    margin-top: 130px;
+    width: 200px;
+
+}
+
+.welcome-message {
+    font-size: 110%;
+    position: absolute;
+    text-align: center;
+    margin-top: -20px;
+    width: 400px;
+
+}
+
+.start-button.hidden {
+    display: none;
+}
+
+.timer {
+    margin-bottom: 20px;
+    display: none;
+}
+
+.time-up {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    color: red;
+}
+
+.continue-button {
+    display: none;
+    text-align: center;
+    width: 200px;
+    border-radius: 20px;
+}
+
+
+/* Estilos para dispositivos com tela de 320 pixels ou menos */
+@media screen and (max-width: 500px) {
+    body {
+        padding: 5px;
+        /* Adicione espaçamento ao redor do conteúdo para telas menores */
+    }
+
+    main {
+        width: 90%;
+        /* Faça com que o elemento principal ocupe a largura total */
+        border-radius: 0;
+        /* Remova o raio do elemento principal */
+        margin-bottom: 5px;
+        /* Reduza a margem inferior para um espaçamento mais compacto */
+    }
+
+    .spnQtd {
+        position: initial;
+        margin-left: 22px;
+    }
+
+    .start-button {
+        width: 300px;
+        /* Faça o botão de início ocupar a largura total */
+        margin-top: 150px;
+        /* Adicione um espaçamento superior menor */
+    }
+
+    .welcome-message {
+        width: 90%;
+        /* Faça a mensagem de boas-vindas ocupar a largura total */
+        margin-top: -5px;
+        /* Ajuste o espaçamento superior para alinhamento */
+        font-size: 90%;
+        /* Reduza o tamanho da fonte para telas menores */
+    }
+
+    .timer {
+        display: block;
+        /* Mostre o temporizador em telas menores */
+        margin-bottom: 5px;
+        /* Ajuste a margem inferior */
+    }
+
+    .continue-button {
+        display: none;
+        /* Mostre o botão de continuar em telas menores */
+    }
+
+    /* Ajuste o estilo das perguntas para que elas não saiam do main */
+    .content {
+        overflow: auto;
+        /* Adicione uma barra de rolagem se o conteúdo estiver fora do main */
+        max-height: calc(100vh - 260px);
+        /* Defina uma altura máxima para o conteúdo das perguntas */
+    }
+
+    .explanation-text {
+        overflow: auto;
+        /* Adicione uma barra de rolagem se o conteúdo estiver fora do main */
+        max-height: calc(100vh - 260px);
+        /* Defina uma altura máxima para o conteúdo das perguntas */
+    }
+}
